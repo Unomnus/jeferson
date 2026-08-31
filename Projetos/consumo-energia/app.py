@@ -1,3 +1,4 @@
+print('=====ENEL + AMIGA=====')
 print('Cálculo do consumo mensal de energia elétrica')
 nome = input('Aparelho elétrico-eletrônico: ')
 potency = float(input('Digite a potência em watts (W): '))
