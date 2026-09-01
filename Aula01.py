@@ -1,0 +1,8 @@
+nome = input('Nome: ')
+idade = int(input('Idade: '))
+massa = float(input('Massa: '))
+altura = float(input('Altura: '))
+num = float(input('Temperatura em ºC: '))
+print('O {} tem {} anos.'.format(nome, idade))
+print('Temperatura em {:.2f}Fº'.format(((9*num)/5)+32))
+print(f'Seu IMC é {massa / (altura * altura):.1f}')
