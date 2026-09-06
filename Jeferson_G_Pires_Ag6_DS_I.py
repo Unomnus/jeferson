@@ -1,6 +1,9 @@
 print('========= DESCONTO EM COMPRAS =========')
 
+# digitando o valor pago pelo cliente
 valor = int(input('Digite o valor pago R$'))
+
+# iniciando a verificação do valor pago e aplicando o desconto
 if valor < 200:
     desconto = valor * 0.05
     valor_final = valor - desconto
