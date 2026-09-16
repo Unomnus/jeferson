@@ -1,6 +1,6 @@
 print('========== Consumo de água ==========')
 
-property = input('Escola o tipo da propriedade: ')
+propriedade = input('Escola o tipo da propriedade 1 - comercial 2 - Casa  3 - Apartamento: ')
 consumo = float(input('Informe o consumo de água em m³: '))
 def calcular_valor(consumo):
     match property:
