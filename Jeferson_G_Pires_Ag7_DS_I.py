@@ -9,7 +9,7 @@ tipo_imovel = input('Digite o tipo de imóvel (comercial, casa ou apartamento): 
 
 # 2. Solicita o consumo mensal em m³
 
-    consumo = float(input("Informe o consumo mensal de água em m³ (ex: 15.5): "))
+consumo = float(input("Informe o consumo mensal de água em m³ (ex: 15.5): "))
 
 # 3. Classificação de acordo com as regras de negócio
 if tipo_imovel == "comercial":
