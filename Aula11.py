@@ -1,2 +1,4 @@
 nome = 'Jeferson Gomes Pires'
-print('O nome do aluno é: {}'.format(nome))
+print(nome.upper())
+print(nome.lower())
+print(nome{:9})
