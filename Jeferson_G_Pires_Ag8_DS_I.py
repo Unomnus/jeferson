@@ -5,7 +5,7 @@ qtd_ruim = 0
 print("=== Pesquisa de Satisfação - TudoWeb ===")
 
 # Estrutura de repetição para 10 entrevistados
-for i in range(1, 11):
+for i in range(1, 51):
     print(f"\nEntrevistado nº {i}:")
     nome = input("Digite o nome: ")
     idade = int(input("Digite a idade: "))
