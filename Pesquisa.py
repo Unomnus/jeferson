@@ -1,19 +1,38 @@
-print('========== Pesquisa de Opnião de Atendimento ==========')
+# Inicialização dos contadores
+qtd_excelente = 0
+qtd_ruim = 0
 
-opnion = 0
-while opnion < 50:
-    print('Digite sua opnião de atendimento: ')
-    print('1 - Excelente')
-    print('2 - Bom')
-    print('3 - Ruim')
+print("=== Pesquisa de Satisfação - TudoWeb ===")
 
-    opnion = int(input('Digite sua opnião: '))
+# Estrutura de repetição para 10 entrevistados
+for i in range(1, 11):
+    print(f"\nEntrevistado nº {i}:")
+    nome = input("Digite o nome: ")
+    idade = int(input("Digite a idade: "))
+    
+    # Validação da opinião do entrevistado
+    while True:
+        print("Opinião sobre o atendimento:")
+        print("1 - EXCELENTE")
+        print("2 - BOM")
+        print("3 - RUIM")
+        opcao = int(input("Opção escolhida (1, 2 ou 3): "))
+        
+        # Estrutura de decisão para contabilizar os votos
+        if opcao == 1:
+            qtd_excelente += 1
+            break
+        elif opcao == 2:
+            break
+        elif opcao == 3:
+            qtd_ruim += 1
+            break
+        else:
+            print("Opção inválida! Digite 1, 2 ou 3.\n")
 
-    if opnion == 1:
-        print('Você escolheu Excelente!')
-    elif opnion == 2:
-        print('Você escolheu Bom!')
-    elif opnion == 3:
-        print('Você escolheu Ruim!')
-    else:
-        print('Opnião inválida! Digite um número entre 1 e 3.')
+# Exibição do relatório final
+print("\n" + "="*35)
+print("     RESULTADO DA PESQUISA")
+print("="*35)
+print(f"a) Quantidade de respostas 'EXCELENTE': {qtd_excelente}")
+print(f"b) Quantidade de respostas 'RUIM': {qtd_ruim}")
