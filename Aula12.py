@@ -13,6 +13,12 @@ print('========== GAME ==========')
 print('Vamos jogar um jogo de adivinhação!')
 print('Estou pensando em um número entre 1 e 10. Tente adivinhar!')
 numero_secreto = random.randint(1, 10)
+print('pensando...')
+jogador = int(input('Digite o seu palpite: '))
+if jogador == numero_secreto:
+    print('Parabéns, {}! Você acertou o número secreto!'.format(nome))
+    else:
+    print('Que pena, {}! Você errou. O número secreto era {}.'.format(nome, numero_secreto))
 
 print('========== VELOCIDADE E MULTA ==========')
 
