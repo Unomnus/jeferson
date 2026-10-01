@@ -4,7 +4,7 @@ nome = input('Digite seu nome: ')
 
 if nome == 'Jeferson':
     print('Que nome bonito!')
-    else:
+else:
     print('Seu nome é tão normal!')
     print('Bom dia, {}'.format(nome))
 
@@ -17,7 +17,7 @@ print('pensando...')
 jogador = int(input('Digite o seu palpite: '))
 if jogador == numero_secreto:
     print('Parabéns, {}! Você acertou o número secreto!'.format(nome))
-    else:
+else:
     print('Que pena, {}! Você errou. O número secreto era {}.'.format(nome, numero_secreto))
 
 print('========== VELOCIDADE E MULTA ==========')
@@ -78,7 +78,7 @@ else:
 
 print('O aumento no salário será de: R$ {:.2f}'.format(aumento))
 
-print(========== TRÊS RETAS PARA UM TRIÂGULO ==========)
+print('========== TRÊS RETAS PARA UM TRIÂGULO ==========')
 
 r1 = float(input('Digite o comprimento da primeira reta: '))
 r2 = float(input('Digite o comprimento da segunda reta: '))
