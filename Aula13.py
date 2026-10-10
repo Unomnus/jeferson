@@ -107,3 +107,57 @@ print(f'Seu IMC é {imc:.2f}. Classificação: {classificacao}.')
 
 print("=========== FIM DO PROGRAMA ===========")
 
+print("=========== CONDIÇÕES DE PAGAMENTO PARA COMPRA DE PRODUTO ===========")
+
+valor_produto = float(input('Digite o valor do produto: R$ '))
+print('Escolha a condição de pagamento:')
+print('1 - À vista dinheiro/cheque (10% de desconto)')
+print('2 - À vista no cartão (5% de desconto)')
+print('3 - Em até 2x no cartão (preço normal)')
+opcao = int(input('Digite a opção desejada (1, 2 ou 3): '))
+if opcao == 1:
+    valor_final = valor_produto * 0.90
+    print(f'Valor final com desconto: R$ {valor_final:.2f}')
+elif opcao == 2:
+    valor_final = valor_produto * 0.95
+    print(f'Valor final com desconto: R$ {valor_final:.2f}')
+elif opcao == 3:
+    valor_final = valor_produto
+    print(f'Valor final sem desconto: R$ {valor_final:.2f}')
+else:
+    print('Opção inválida! Por favor, escolha uma opção válida.')
+
+print("=========== FIM DO PROGRAMA ===========")
+
+print{"=========== JOKÊNPO ===========")}
+
+print('Escolha uma opção:')
+print('1 - Pedra')
+print('2 - Papel')
+print('3 - Tesoura')
+
+artefato = int(input('Digite o número correspondente à sua escolha: '))
+import random
+if artefato not in [1, 2, 3]:
+    print('Opção inválida! Por favor, escolha uma opção válida.')
+    if artefato == 1:
+        jogador = 'Pedra'
+    elif artefato == 2:
+        jogador = 'Papel'
+    else:
+        jogador = 'Tesoura'
+
+computador = random.choice(['Pedra', 'Papel', 'Tesoura'])
+print(f'Você escolheu: {jogador}')
+print(f'O computador escolheu: {computador}')
+
+if jogador == computador:
+    print('Empate!')
+elif (jogador == 'Pedra' and computador == 'Tesoura') or \
+     (jogador == 'Papel' and computador == 'Pedra') or \
+     (jogador == 'Tesoura' and computador == 'Papel'):
+    print('Você venceu!')
+else:
+    print('Você perdeu!')
+
+print("=========== FIM DO PROGRAMA ===========")
