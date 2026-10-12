@@ -25,7 +25,7 @@ def coletar_dados_alunos(qtd):
         status = verificar_status(media)
 # Cria um dicionário para armazenar os dados do aluno e adiciona à lista
         aluno = {"nome": nome, "media": media, "status": status}
-        lista_alunos.append(aluno)
+        lista_alunos.append(aluno) # comando append adiciona o dicionário do aluno à lista de alunos
 
     return lista_alunos
 
