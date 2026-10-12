@@ -1,6 +1,12 @@
 # Cálculo de média de notas
-def calcular_media(notas):
-    if not notas:
-        return 0
-    return sum(notas) / len(notas)
+
+quantidade_alunos = int(input("Digite a quantidade de alunos: "))
+
+def media_notas(quantidade):
+    soma_notas = 0
+    for i in range(quantidade):
+        nota = float(input(f"Digite a nota do aluno {i + 1}: "))
+        soma_notas += nota
+    media = soma_notas / quantidade
+    return media
 
