@@ -1,12 +1,52 @@
-# Cálculo de média de notas
+# 1. Definições de Funções e Procedimentos
 
-quantidade_alunos = int(input("Digite a quantidade de alunos: "))
+def calcular_media(nota1, nota2):
+    return (nota1 + nota2) / 2
 
-def media_notas(quantidade):
-    soma_notas = 0
-    for i in range(quantidade):
-        nota = float(input(f"Digite a nota do aluno {i + 1}: "))
-        soma_notas += nota
-    media = soma_notas / quantidade
-    return media
+def verificar_status(media):
+    if media >= 6.0:
+        return "Aprovado"
+    else:
+        return "Reprovado"
 
+def coletar_dados_alunos(qtd):
+    lista_alunos = []
+    for i in range(qtd):
+        print(f"\n--- Aluno {i + 1} ---")
+        nome = input("Digite o nome do aluno: ")
+        nota1 = float(input("Digite a primeira nota: "))
+        nota2 = float(input("Digite a segunda nota: "))
+
+        media = calcular_media(nota1, nota2)
+        status = verificar_status(media)
+
+        aluno = {"nome": nome, "media": media, "status": status}
+        lista_alunos.append(aluno)
+
+    return lista_alunos
+
+def gerar_relatorio(lista_alunos):
+    print("\n" + "=" * 30)
+    print("       RELATÓRIO DE DESEMPENHO")
+    print("=" * 30)
+
+    soma_medias = 0
+    for aluno in lista_alunos:
+        print(f"Nome: {aluno['nome']}")
+        print(f"Média: {aluno['media']:.2f}")
+        print(f"Status: {aluno['status']}")
+        print("-" * 30)
+        soma_medias += aluno['media']
+
+    if len(lista_alunos) > 0:
+        media_turma = soma_medias / len(lista_alunos)
+        print(f"Média geral da turma: {media_turma:.2f}")
+
+# 2. Bloco Principal (Onde o programa realmente começa a rodar)
+qtd_alunos = int(input("Digite a quantidade de alunos: "))
+
+# Executa a coleta e guarda os dados estruturados
+alunos_cadastrados = coletar_dados_alunos(qtd_alunos)
+
+# Executa o relatório passando os dados coletados
+gerar_relatorio(alunos_cadastrados)
