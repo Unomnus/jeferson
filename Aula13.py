@@ -2,11 +2,13 @@ print("=========== FINANCIAMENTO DE CASA POR EMPRÉSTIMO BANCÁRIO ===========")
 
 valor_casa = float(input('Valor da casa: R$ '))
 salario = float(input('Salário do comprador: R$ '))
+anos = int(input('Quantos anos de financiamento: '))
+prestacao_mensal = valor_casa / (anos * 12)
 
-if valor_casa > (salario * 0.30):
-    print('Empréstimo negado! O valor da prestação excede 30% do salário.')
+if prestacao_mensal > (salario * 0.30):
+    print(f'Empréstimo negado! A prestação mensal de R$ {prestacao_mensal:.2f} excede 30% do salário.')
 else:
-    print('Empréstimo aprovado! O valor da prestação está dentro do limite permitido.')
+    print(f'Empréstimo aprovado! A prestação mensal será de R$ {prestacao_mensal:.2f}.')
 
 print('=========== FIM DO PROGRAMA ===========')
 
