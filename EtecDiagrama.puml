@@ -1,0 +1,54 @@
+left to right direction
+skinparam packageStyle rectangle
+
+actor Aluno
+actor Professor
+actor "Secretaria Acadêmica" as Secretaria
+actor "Sistema Interno de Pagamentos" as Pagamento
+
+rectangle "Sistema de Matrícula Online - ETEC" {
+  ' Casos de Uso do Aluno
+  (Cadastro) as UC1
+  (Visualizar Cursos) as UC2
+  (Matrícula) as UC3
+  (Visualizar Notas) as UC4
+  (Visualizar Histórico) as UC5
+
+  ' Casos de Uso do Professor
+  (Lista de Alunos) as UC6
+  (Registrar Notas) as UC7
+  (Registrar Frequência) as UC8
+  (Disponibilizar Materiais) as UC9
+
+  ' Casos de Uso da Secretaria
+  (Gerenciar Alunos/Professores) as UC10
+  (Criar/Editar Cursos) as UC11
+  (Aprovar Matrículas) as UC12
+  (Gerar Relatórios) as UC13
+
+  ' Caso de Uso do Sistema Externo
+  (Processar Taxas) as UC14
+}
+
+' Conexões Aluno
+Aluno --> UC1
+Aluno --> UC2
+Aluno --> UC3
+Aluno --> UC4
+Aluno --> UC5
+
+' Conexões Professor
+Professor --> UC6
+Professor --> UC7
+Professor --> UC8
+Professor --> UC9
+
+' Conexões Secretaria
+Secretaria --> UC10
+Secretaria --> UC11
+Secretaria --> UC12
+Secretaria --> UC13
+
+' Interação com Pagamento
+UC3 ..> UC14 : <<include>>
+Pagamento --> UC14
