@@ -13,11 +13,11 @@ janela.title("ROLADOR DADOS")
 janela.geometry("800x600")
 
 # Adicionando um texto (Label)
-rotulo = tk.Label(janela, text="Bem-vindo ao Python!", font=("Arial", 12))
+rotulo = tk.Label(janela, text="ROLADOR DE DADOS", font=("Arial", 12))
 rotulo.pack(pady=20)
 
 # Adicionando um botão
-botao = tk.Button(janela, text="Clique Aqui", command=mostrar_mensagem)
+botao = tk.Button(janela, text="ROLAR", command=mostrar_mensagem)
 botao.pack(pady=10)
 
 # Mantendo a janela aberta
