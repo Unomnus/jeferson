@@ -10,7 +10,7 @@ def mostrar_mensagem():
 # Criando a janela principal
 janela = tk.Tk()
 janela.title("ROLADOR DADOS")
-janela.geometry("300x150")
+janela.geometry("800x600")
 
 # Adicionando um texto (Label)
 rotulo = tk.Label(janela, text="Bem-vindo ao Python!", font=("Arial", 12))
