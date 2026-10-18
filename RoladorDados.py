@@ -9,7 +9,7 @@ def mostrar_mensagem():
 
 # Criando a janela principal
 janela = tk.Tk()
-janela.title("Meu Primeiro App")
+janela.title("ROLADOR DADOS")
 janela.geometry("300x150")
 
 # Adicionando um texto (Label)
