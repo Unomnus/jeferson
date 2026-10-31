@@ -1,14 +1,103 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
-<meta charset="utf-8">
-<title>Meus Sites Favoritos</title>
+  <meta charset="utf-8">
+  <title>ROLADOR DE DADOS - RPG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Estilos temporários para identificação */
+    .sucesso { color: #2e7d32; }
+    .fracasso { color: #c62828; }
+    
+    /* Layout inicial dos dados exibidos */
+    .dados-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  </style>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-<strong>Meus sites favoritos: JEFERSON GOMES PIRES</strong>
-<h1>BEHANCE</h1>
-<img src="C:\Users\Jeferson\Documents\GitHub\Raksha.png" alt="Raksha"><br>
-<h1><a href="https://www.behance.net/Jefersongp">Minha Conta</a></h1>
+  <header>
+    <h1>ROLADOR DE DADOS - RPG</h1>
+  </header>
+
+  <main>
+    <fieldset>
+      <legend><strong>CONFIGURAÇÃO DA ROLAGEM</strong></legend>
+
+      <p>
+        <label for="face"><strong>FACE:</strong></label>
+        <select name="face" id="face">
+          <option value="D4" selected>D4</option>
+          <option value="D6">D6</option>
+          <option value="D8">D8</option>
+          <option value="D10">D10</option>
+          <option value="D12">D12</option>
+          <option value="D20">D20</option>
+          <option value="D100">D100</option>
+        </select>
+
+        <label for="gurps">
+          <input type="checkbox" name="gurps" id="gurps">
+          <strong>SISTEMA GURPS</strong>
+        </label>
+      </p>
+
+      <p>
+        <label for="quantidade"><strong>QUANTIDADE:</strong></label>
+        <input type="number" min="1" value="1" name="quantidade" id="quantidade" placeholder="Somente números">
+
+        <label for="numero-alvo"><strong>NÚMERO-ALVO / CD:</strong></label>
+        <input type="number" name="numero-alvo" id="numero-alvo" placeholder="Somente números">
+
+        <label for="modificador"><strong>MODIFICADORES:</strong></label>
+        <input type="number" name="modificador" id="modificador" placeholder="Ex: +2, -1" value="0">
+      </p>
+
+      <input type="button" id="btn-rolar" value="ROLAR DADOS">
+
+      <fieldset>
+        <legend><strong>STORYTELLING / EXALTED (D10)</strong></legend>
+        <label for="ativar-d10-system">
+          <input type="checkbox" id="ativar-d10-system">
+          <strong>ACIONAR MODO D10 SYSTEM</strong>
+        </label>
+        <br><br>
+
+        <label>
+          <input type="radio" name="d10_system_type" value="STORYTELLING" id="system_storytelling" checked>
+          STORYTELLING (10 conta x2)
+        </label>
+        <br>
+        <label>
+          <input type="radio" name="d10_system_type" value="EXALTED" id="system_exalted">
+          EXALTED (10s duplos)
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend><strong>FACES ROLADAS</strong></legend>
+        <div class="sucesso">
+          <strong>Sucessos:</strong>
+          <div id="sucessos" class="dados-container"></div>
+        </div>
+        <div class="fracasso">
+          <strong>Fracassos / Falhas:</strong>
+          <div id="fracassos" class="dados-container"></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><strong>RESULTADOS FINAIS</strong></legend>
+        <div id="somascs" class="sucesso"><strong>Total Sucessos:</strong> <span>0</span></div>
+        <div id="somafcs" class="fracasso"><strong>Total Fracassos:</strong> <span>0</span></div>
+      </fieldset>
+
+    </fieldset>
+  </main>
 </body>
 </html>
