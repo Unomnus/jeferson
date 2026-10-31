@@ -1,0 +1,20 @@
+/* Transforma a div em um Contêiner Flex */
+.container {
+  display: flex;
+  background-color: #f1f1f1;
+  height: 200px;
+  
+  /* Alinhamento no eixo principal (horizontal por padrão) */
+  justify-content: space-around;
+  
+  /* Alinhamento no eixo transversal (vertical) */
+  align-items: center;
+}
+
+/* Estilo dos itens filhos */
+.item {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+}
