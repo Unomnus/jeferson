@@ -1,7 +1,7 @@
 /* Transforma a div em um Contêiner Flex */
 .container {
   display: flex;
-  background-color: #f1f1f1;
+  background-color: rgba(212, 238, 202, 0.726);
   height: 200px;
   
   /* Alinhamento no eixo principal (horizontal por padrão) */
@@ -13,7 +13,7 @@
 
 /* Estilo dos itens filhos */
 .item {
-  background-color: #0077cc;
+  background-color: rgb(25, 80, 3);
   color: white;
   padding: 20px;
   font-family: sans-serif;
