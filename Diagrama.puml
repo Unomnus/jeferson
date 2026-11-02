@@ -1,0 +1,28 @@
+erDiagram
+    DEPARTAMENTO {
+        int numero_departamento PK
+        string nome
+        string local
+    }
+    
+    PROJETO {
+        int codigo_projeto PK
+        string descricao
+        string duracao
+    }
+    
+    PECA {
+        int numero_peca PK
+        string descricao
+    }
+    
+    FUNCIONARIO {
+        int matricula PK
+        string nome
+        string cargo
+    }
+
+    DEPARTAMENTO ||--o| PROJETO : "desenvolve"
+    DEPARTAMENTO ||--|{ FUNCIONARIO : "emprega"
+    DEPARTAMENTO |o--|| FUNCIONARIO : "gerenciado por"
+    PROJETO }|--|{ PECA : "utiliza"
