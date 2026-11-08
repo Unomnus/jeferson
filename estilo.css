@@ -32,7 +32,7 @@ p {
 /* Centralização e ajuste responsivo das imagens */
 img {
   display: block;
-  margin: 15px auto;    /* Centraliza a imagem horizontalmente na coluna */
+  margin: 10px auto;    /* Centraliza a imagem horizontalmente na coluna */
   max-width: 100%;      /* Garante que a imagem não estoure a caixa */
   height: auto;
   border-radius: 6px;   /* Cantos levemente arredondados */
